@@ -4,8 +4,10 @@ import connectDB from "./config/database.js";
 import testRoute from "./routes/testroute.js";
 import authRoutes from "./routes/authRoutes.js";
 import uploadRoutes from "./routes/uploadRoutes.js";
+import userRoutes from "./routes/userRoutes.js";
 
 dotenv.config();
+
 
 // Connect to MongoDB
 connectDB();
@@ -23,6 +25,7 @@ app.get("/", (req, res) => {
 app.use("/", testRoute);
 app.use("/", authRoutes);
 app.use("/", uploadRoutes);
+app.use("/",userRoutes);
 
 // Define PORT from .env or default 5000
 const PORT = process.env.PORT || 5000;
