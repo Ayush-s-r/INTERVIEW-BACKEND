@@ -20,7 +20,11 @@ const userSchema = new mongoose.Schema({
   },
   role:{
     type:String,
+<<<<<<< HEAD
     enum:["student","campany"],
+=======
+    enum:["student","company"],
+>>>>>>> 348db9f1a68db3ea9c8b980366ebd2af95e4f699
     default:"student"
   }
 }, {
