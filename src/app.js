@@ -5,6 +5,7 @@ import testRoute from "./routes/testroute.js";
 import authRoutes from "./routes/authRoutes.js";
 import uploadRoutes from "./routes/uploadRoutes.js";
 import userRoutes from "./routes/userRoutes.js";
+import aiRecruiterRoutes from "./routes/aiRecruiter.js"
 
 dotenv.config();
 
@@ -38,6 +39,7 @@ app.use("/", testRoute);
 app.use("/", authRoutes);
 app.use("/", uploadRoutes);
 app.use("/",userRoutes);
+app.use("/api/Interview", aiRecruiterRoutes);
 
 // Define PORT from .env or default 5000
 const PORT = process.env.PORT || 5000;
